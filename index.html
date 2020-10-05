@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestWeb</title>
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <script>
+        const webList = [
+            "Add me On Discord","How is your Day","This is not for fun only","I play Minecraft", "Looking for a girl", "Blank, express, & Glory r Dead"
+        ]
+        setInterval(() => {
+            const staBruh = Math.floor(Math.random() * (webList.length - 1) + 1);
+            // document.title(webList[staBruh]);
+            document.title = (webList[staBruh]);
+            document.head
+            
+            console.log("Log from Web Title of the day: " + webList[staBruh]);
+        }, 3000);
+
+        (function() {
+            setInterval(()=> {
+                const faviconList = ["./img/icons/1.ico","./img/icons/2.ico","./img/icons/3.ico","./img/icons/4.ico" ]
+                const favri = Math.floor(Math.random() * (faviconList.length -1) + 1);
+                var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+                link.type = 'image/x-icon';
+                link.rel = 'shortcut icon';
+                link.href = (faviconList[favri]);
+                console.log("Log from Web Icon: " + faviconList[favri]);
+                document.getElementsByTagName('head')[0].appendChild(link);
+            }, 10000);
+        })();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
